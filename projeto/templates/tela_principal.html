@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SisAgMusic</title>
+     <link rel="stylesheet" href="../static/css/tela_principal.css">
+     <link rel="stylesheet" href="../static/css/tabelaagd.css">
+     <link rel="stylesheet" href="../static/css/matricula.css">
+     <link rel="stylesheet" href="../static/css/overlay.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <button class="btn">Agendamento</button>
+            <button class="btn">Deletar agendamento</button>
+            <Button class="btn" id="matricular" onclick="pop_matri()">Matricular</Button>
+            <button class="btn">Alunos</button>
+            <button class="btn">Sair</button>
+        </div>
+        <h1>Sistema de Agendamento</h1>
+        
+        <div class="mesano">
+            <select class="slc" name="Mês">
+                <option value="01">Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+        
+            </select>       
+            <select class="slc" name="Ano">
+                <option value="25">2025</option>
+                <option value="26">2026</option>
+                <option value="27">2027</option>
+                <option value="28">2028</option>
+                <option value="29">2029</option>
+                <option value="30">2030</option>
+                <option value="31">2031</option>
+                <option value="32">2032</option>
+                <option value="33">2033</option>
+                <option value="34">2034</option>
+                <option value="35">2035</option>
+                <option value="36">2036</option>
+            </select>
+           
+        </div>
+       <div class="agd">
+        <table>
+            <thead>
+                <tr>
+                    <th>Hora/Dia</th>
+                    <th>Segunda-feira</th>
+                    <th>Terça-feira</th>
+                    <th>Quarta-feira</th>
+                    <th>Quinta-feira</th>
+                    <th>Sexta-feira</th>
+                    <th>Sábado</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            
+                </tr>
+                <tr>
+                    <td>09:00 - 10:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>12:00 - 13:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>13:00 - 14:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>14:00 - 15:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>15:00 - 16:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>16:00 - 17:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>17:00 - 18:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+       </div> 
+    </div>
+    <div class="overlay" id="pop_over">
+    <div class="pop_mat">
+        <button class="x" onclick="close_matri()">X</button>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <th>Nome Completo</th>
+                    <td><input type="text" name="nome" required></td>
+                </tr>
+                <tr>
+                    <th>Idade</th>
+                    <td><input type="number" name="idade" required></td>
+                </tr>
+                <tr>
+                    <th>Instrumento</th>
+                    <td>
+                        <select name="instrumento" required>
+                            <option value="violão">Violão</option>
+                            <option value="piano">Piano</option>
+                            <option value="bateria">Bateria</option>
+                            <option value="guitarra">Guitarra</option>
+                            <option value="baixo">Baixo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <th>Telefone</th>
+                    <td><input type="text" name="telefone" required></td>
+                </tr>
+                <tr>
+                    <th>Observações</th>
+                    <td><textarea name="observacoes" rows="4" placeholder="Insira qualquer observação (opcional)"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Realizar Matrícula">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+    <script>
+        function pop_matri(){
+            document.getElementById("pop_over").style.display = "block";
+        }
+        function close_matri(){
+            document.getElementById("pop_over").style.display = "none";
+        }
+    </script>
+
+    
+        
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastrar Professor</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/cadastrar_professor.css' %}">
+    </head>>
+<body>
+    <h1>Cadastrar Professor</h1>
+
+    <!-- Formulário para cadastrar professor -->
+    <form method="POST">
+        {% csrf_token %}  <!-- Proteção contra CSRF, necessaria para todas as requisições POST em Django (descobir hoje kkkkk) -->
+
+        <!-- Exibe o formulario para o professor -->
+        {{ form.as_p }}  <!-- Exibe o formulario como paragrafos, um campo por linha (importado do proprio django) -->
+
+        <!-- Botão para submeter o formulário -->
+        <button type="submit">Salvar</button>
+    </form>
+
+    <!-- Link para voltar para a lista de professores, caso o usuário queira cancelar -->
+    <a href="{% url 'lista_professores' %}">Voltar para a lista de professores</a>
+</body>
+</html>

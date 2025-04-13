@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Bem-vindo, {{ request.user.username }}!</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Usuário:</label>
+        <input type="text" name="username">
+        
+        <label>Senha:</label>
+        <input type="password" name="password">
+        
+        <button type="submit">Entrar</button>
+    </form>
+    <p>Usuário autenticado: {{ request.user.is_authenticated }}</p>
+    <p>Você está logado.</p>
+</body>
+</html>
